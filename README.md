@@ -1,5 +1,3 @@
 # ohtuvarasto
 
-![GHA workflow badge](https://github.com/spherical-spinach/ohtuvarasto/workflows/CI/badge.svg)
-
-test
+![CI](https://github.com/spherical-spinach/ohtuvarasto/actions/workflows/main.yml/badge.svg)
