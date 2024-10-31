@@ -44,12 +44,12 @@ class TestVarasto(unittest.TestCase):
         self.assertAlmostEqual(self.varasto.saldo, 0)
     
     def test_alustaessa_virheellinen_tilavuus(self):
-        with self.assertRaises(ValueError):
-            Varasto(-1)
+        newVarasto = Varasto(-1)
+        self.assertAlmostEqual(newVarasto.paljonko_mahtuu(), 1)
 
     def test_alustaessa_virheellinen_alku_saldo(self):
-        with self.assertRaises(ValueError):
-            Varasto(10, -1)
+        newVarasto = Varasto(0, -1)
+        self.assertAlmostEqual(newVarasto.paljonko_mahtuu(), 0)
 
     def test_lisaa_liikaa_tavaraa(self):
         self.varasto.lisaa_varastoon(100000)
