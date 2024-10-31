@@ -45,7 +45,7 @@ class TestVarasto(unittest.TestCase):
     
     def test_alustaessa_virheellinen_tilavuus(self):
         newVarasto = Varasto(-1)
-        self.assertAlmostEqual(newVarasto.paljonko_mahtuu(), 100)
+        self.assertAlmostEqual(newVarasto.paljonko_mahtuu(), 1)
 
     def test_alustaessa_virheellinen_alku_saldo(self):
         newVarasto = Varasto(0, -1)
