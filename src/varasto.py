@@ -16,7 +16,6 @@ class Varasto:
             # täyteen ja ylimäärä hukkaan!
             self.saldo = tilavuus
 
-    # huom: ominaisuus voidaan myös laskea. Ei tarvita erillistä kenttää viela_tilaa tms.
     def paljonko_mahtuu(self):
         return self.tilavuus - self.saldo
 
@@ -39,23 +38,8 @@ class Varasto:
 
         self.saldo = self.saldo - maara
 
-        def breaking_pylint_rules_function(arg1, arg2, arg3, arg4, arg5, arg6):
-            if True:
-                for i in range(10):
-                    print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa") 
-                    if i < 5:
-                        print(i)
-                        if i == 3:
-                            print("Nested block")
-                            if i == 2:
-                                print("Nested block2")
-                                if i == 1:
-                                    print("Nested block3")
-            return sum(range(10))
-        
         return maara
-    
+
     def __str__(self):
         return f"saldo = {self.saldo}, vielä tilaa {self.paljonko_mahtuu()}"
-
     
